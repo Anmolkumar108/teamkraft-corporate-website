@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #17324d;
+  --color-navy-deep: #102438;
+  --color-cobalt: #2463a6;
+  --color-teal: #168c88;
+  --color-ink: #243447;
+  --color-ink-soft: #667085;
+  --color-hairline: #dce4ec;
+  --color-mist: #f4f7fa;
+  --color-success: #198754;
+  --font-sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-cobalt);
+    outline-offset: 2px;
+  }
+}
+
+@utility container-x {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+}
+
+@utility hero-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(16, 36, 56, 0.94) 0%,
+    rgba(16, 36, 56, 0.78) 45%,
+    rgba(16, 36, 56, 0.45) 100%
+  );
+}
